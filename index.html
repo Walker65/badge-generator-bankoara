@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Badge Festival</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Générateur de Badge Festival</h1>
+            <p>Créez votre badge personnalisé en quelques clics</p>
+        </header>
+
+        <main>
+            <section class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-content">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14,2 14,8 20,8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10,9 9,9 8,9"></polyline>
+                        </svg>
+                        <h3>Déposez votre photo ici</h3>
+                        <p>ou cliquez pour parcourir vos fichiers</p>
+                        <input type="file" id="photoInput" accept="image/*" hidden>
+                    </div>
+                </div>
+            </section>
+
+            <section class="preview-section" id="previewSection" style="display: none;">
+                <div class="preview-container">
+                    <div class="badge-preview">
+                        <div class="badge-frame" id="badgeFrame">
+                            <canvas id="photoCanvas"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="controls">
+                        <div class="control-group">
+                            <label for="zoomSlider">Zoom</label>
+                            <div class="slider-container">
+                                <button id="zoomOut">−</button>
+                                <input type="range" id="zoomSlider" min="50" max="200" value="100">
+                                <button id="zoomIn">+</button>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label for="rotateSlider">Rotation</label>
+                            <div class="slider-container">
+                                <button id="rotateLeft">↶</button>
+                                <input type="range" id="rotateSlider" min="-180" max="180" value="0">
+                                <button id="rotateRight">↷</button>
+                            </div>
+                        </div>
+
+                        <div class="control-buttons">
+                            <button id="resetBtn" class="btn secondary">Réinitialiser</button>
+                            <button id="downloadBtn" class="btn primary">Télécharger le badge</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <canvas id="exportCanvas" style="display: none;"></canvas>
+        <img id="badgeTemplate" src="Jy serai.jpg" style="display: none;" alt="Template du badge">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
