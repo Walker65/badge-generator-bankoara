@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Générateur de Badge Festival</title>
+    <title>Générateur de Badge Festival Bankoara</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Générateur de Badge Festival</h1>
+            <h1>FESTIVAL BANIGANSE 2025</h1>
             <p>Créez votre badge personnalisé en quelques clics</p>
         </header>
 
@@ -17,7 +17,7 @@
             <section class="upload-section">
                 <div class="upload-area" id="uploadArea">
                     <div class="upload-content">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                             <polyline points="14,2 14,8 20,8"></polyline>
                             <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -25,7 +25,8 @@
                             <polyline points="10,9 9,9 8,9"></polyline>
                         </svg>
                         <h3>Déposez votre photo ici</h3>
-                        <p>ou cliquez pour parcourir vos fichiers</p>
+                        <p>Formats supportés : JPG, PNG, WebP</p>
+                        <p>Glissez-déposez ou cliquez pour parcourir vos fichiers</p>
                         <input type="file" id="photoInput" accept="image/*" hidden>
                     </div>
                 </div>
@@ -66,6 +67,10 @@
                 </div>
             </section>
         </main>
+
+        <footer class="footer">
+            <p>All rights reserved by <strong>Adam Walker</strong></p>
+        </footer>
 
         <canvas id="exportCanvas" style="display: none;"></canvas>
         <img id="badgeTemplate" src="Jy serai.jpg" style="display: none;" alt="Template du badge">
